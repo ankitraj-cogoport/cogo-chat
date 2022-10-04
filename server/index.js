@@ -19,7 +19,7 @@ const main = async () => {
     // await app.prepare();
     const server = express();
 
-    server.use('/',blogs)
+    server.use('/blogs',blogs)
 
     // running customised server at specified port
     server.listen(APP_PORT, (err) => {

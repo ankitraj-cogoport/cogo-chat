@@ -1,8 +1,8 @@
-const express = require('express')
-let app = express.Router()
+const express = require('express');
+let router = express.Router();
 
-app.get('/', function (req, res) {
+router.get('/', function (req, res) {
     res.send('All Blogs');
 });
 
-module.exports = app
+module.exports = router;
