@@ -12,7 +12,7 @@ const {
 } = process.env;
 
 const pool = new Pool({
-    username: POSTGRES_USERNAME,
+    user: POSTGRES_USERNAME,
     password: POSTGRES_PASSWORD,
     database: POSTGRES_DB_NAME,
     host: POSTGRES_HOST,

@@ -9,7 +9,7 @@ pool.connect(function(err) {
 
 router.get('/', function (req, res) {
     // res.send('Hello world');
-    pool.query('SELECT * FROM users', (error, results) => {
+    pool.query('SELECT * FROM shipments LIMIT 10', (error, results) => {
         if (error) {
           throw error
         }
