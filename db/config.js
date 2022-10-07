@@ -11,14 +11,24 @@ const {
   POSTGRES_DIALECT,
 } = process.env;
 
-const pool = new Pool({
-    user: POSTGRES_USERNAME,
-    password: POSTGRES_PASSWORD,
-    database: POSTGRES_DB_NAME,
-    host: POSTGRES_HOST,
-    port: POSTGRES_PORT,
-    dialect: POSTGRES_DIALECT,
-    dialectOptions: { bigNumberStrings: true }
-});
+// const pool = new Pool({
+//     user: POSTGRES_USERNAME,
+//     password: POSTGRES_PASSWORD,
+//     database: POSTGRES_DB_NAME,
+//     host: POSTGRES_HOST,
+//     port: POSTGRES_PORT,
+//     dialect: POSTGRES_DIALECT,
+//     // dialectOptions: { bigNumberStrings: true }
+// });
 
-module.exports = pool;
+// module.exports = pool;
+
+module.exports = {
+  username: POSTGRES_USERNAME,
+  password: POSTGRES_PASSWORD,
+  database: POSTGRES_DB_NAME,
+  host: POSTGRES_HOST,
+  port: POSTGRES_PORT,
+  dialect: POSTGRES_DIALECT,
+  dialectOptions: { bigNumberStrings: true },
+};

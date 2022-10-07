@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const config = require('../config');
+const postModel = require('./post');
 
 const db = {};
 
@@ -10,7 +11,7 @@ const requireModel = (schema) => {
   db[model.name] = model;
 };
 
-console.log(requireModel, 'reeee');
+requireModel(postModel);
 
 Object.keys(db).forEach((modelName) => {
   if (db[modelName].associate) {
